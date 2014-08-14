@@ -1,4 +1,9 @@
-# 1.7.0 (unreleased)
+# 1.7.1 (unreleased)
+
+- [Issue #691](https://github.com/grafana/grafana/issues/691). Dashboard: tooltip fixes, sometimes they would not show, and sometimes they would get stuck.
+- [Issue #695](https://github.com/grafana/grafana/issues/695). Dashboard: Tooltip on goto home menu icon would get stuck after clicking on it
+
+# 1.7.0 (2014-08-11)
 
 **Fixes**
 - [Issue #652](https://github.com/grafana/grafana/issues/652). Timepicker: Entering custom date range impossible when refresh is low (now is constantly reset)
