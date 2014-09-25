@@ -266,13 +266,23 @@ function (angular, $, kbn, moment, _) {
         function addAxisLabels() {
           if (scope.panel.leftYAxisLabel) {
             elem.css('margin-left', '10px');
-            var yaxisLabel = $("<div class='axisLabel yaxisLabel'></div>")
+            var lyaxisLabel = $("<div class='axisLabel lyaxisLabel'></div>")
               .text(scope.panel.leftYAxisLabel)
               .appendTo(elem);
 
-            yaxisLabel.css("margin-top", yaxisLabel.width() / 2 - 20);
+            lyaxisLabel.css("margin-top", lyaxisLabel.width() / 2 - 20);
           } else if (elem.css('margin-left')) {
             elem.css('margin-left', '');
+          }
+          if (scope.panel.rightYAxisLabel) {
+            elem.css('margin-right', '10px');
+            var ryaxisLabel = $("<div class='axisLabel ryaxisLabel'></div>")
+              .text(scope.panel.rightYAxisLabel)
+              .appendTo(elem);
+
+            ryaxisLabel.css("margin-top", ryaxisLabel.width() / 2 - 20);
+          } else if (elem.css('margin-right')) {
+            elem.css('margin-right', '');
           }
         }
 

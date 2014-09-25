@@ -33,6 +33,10 @@
         <label class="small">Max / <a ng-click="toggleGridMinMax('rightMax')">Auto <i class="icon-star" ng-show="_.isNull(panel.grid.rightMax)"></i></a></label>
         <input type="number" class="input-small" ng-model="panel.grid.rightMax" ng-change="render()" ng-model-onblur />
       </div>
+      <div class="editor-option">
+        <label class="small">Label</label>
+        <input ng-change="get_data()" ng-model-onblur placeholder="" type="text" class="input-medium" ng-model="panel.rightYAxisLabel">
+      </div>
   </div>
 </div>
 
