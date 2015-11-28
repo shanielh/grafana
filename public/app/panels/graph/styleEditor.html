@@ -52,10 +52,15 @@
 			text="All series" model="panel.tooltip.shared" change="render()"
 			tip="Show all series on same tooltip and a x croshair to help follow all series">
 		</editor-opt-bool>
-		<div class="editor-option" ng-show="panel.stack">
+		<div class="editor-option" ng-show="panel.stack && panel.tooltip.shared">
       <label class="small">Stacked Values <tip>How should the values in stacked charts to be calculated?</tip></label>
       <select class="input-small" ng-model="panel.tooltip.value_type" ng-options="f for f in ['cumulative','individual']" ng-change="render()"></select>
     </div>
+    <div class="editor-option" ng-show="panel.stack && panel.tooltip.shared">
+     <label class="small">Show Percent Values <tip>Show percent values for all stacked series in the tooltip</tip></label>
+    <input class="cr1" id="panel.tooltip.percent_vals" type="checkbox" ng-model="panel.tooltip.percent_vals"  ng-change="render()" ng-true-value="1" ng-false-value="0">
+    <label for="panel.tooltip.percent_vals" class="cr1" ></label>
+   </div>
   </div>
 </div>
 
