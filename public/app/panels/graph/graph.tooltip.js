@@ -62,9 +62,6 @@ function ($,kbn) {
             value = series.data[hoverIndex][1];
             original_value = value;
             sum_value+= original_value;
-          } else if (!series.stack) {
-            value = series.data[hoverIndex][1];
-            original_value = value;
           } else {
             original_value = series.data[hoverIndex][1];
             last_value += original_value;
