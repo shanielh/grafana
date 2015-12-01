@@ -56,11 +56,10 @@
       <label class="small">Stacked Values <tip>How should the values in stacked charts to be calculated?</tip></label>
       <select class="input-small" ng-model="panel.tooltip.value_type" ng-options="f for f in ['cumulative','individual']" ng-change="render()"></select>
     </div>
-    <div class="editor-option" ng-show="panel.stack && panel.tooltip.shared">
-     <label class="small">Show Percent Values <tip>Show percent values for all stacked series in the tooltip</tip></label>
-    <input class="cr1" id="panel.tooltip.percent_vals" type="checkbox" ng-model="panel.tooltip.percent_vals"  ng-change="render()" ng-true-value="1" ng-false-value="0">
-    <label for="panel.tooltip.percent_vals" class="cr1" ></label>
-   </div>
+    <editor-opt-bool
+			text="Show Percent Values" model="panel.tooltip.percent_vals" showIf="panel.stack && panel.tooltip.shared" change="render()"
+			tip="Show percent values for all stacked series in the tooltip">
+		</editor-opt-bool>   
   </div>
 </div>
 
